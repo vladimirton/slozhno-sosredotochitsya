@@ -5,8 +5,43 @@
 */
 
 .page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --text-color: #353430;
+  --title-text-color: #ffc2e6;
+  --decor-color: #ff8dcb;
+  --secondary-text-color: #353430;
+  --decor-text-color: var(--text-color);
+  --decor-shadow: var(--decor-color);
+  --main-bg-image: url('../images/cover-image-light.png');
+  --decor-line-title: var(--text-color);
+  --visible-rec: none;
+  --main-hover-button-border-color: #32312d66;
+  --main-focus-button-border-color: var(--text-color);
+  --page-bg-color: #fff1f7;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-color: #353430;
+    --title-text-color: #ffc2e6;
+    --decor-color: #ff8dcb;
+    --secondary-text-color: #353430;
+    --decor-text-color: var(--text-color);
+    --decor-shadow: var(--decor-color);
+    --decor-line-title: var(--text-color);
+    --visible-rec: none;
+    --main-focus-button-border-color: var(--text-color);
+    --main-hover-button-border-color: #32312d66;
+    --main-bg-image: url('../images/cover-image-light.png');
+    --page-bg-color: #fff1f7;
+  }
+}
+
+@media (width = 1024px) {
+  .header__title {
+    --decor-shadow: #ff0070;
+  }
+
+  .footer__title {
+    --decor-shadow: #ff0070;
+  }
 }
